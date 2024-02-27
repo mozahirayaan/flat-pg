@@ -1,0 +1,75 @@
+body{
+    padding:2%;
+    margin:0;
+ background-color: #6df2c6;
+}
+#div1{
+    text-align: center;
+    background-color:white;
+    height:70%;
+    width:75%;
+    margin-top: 8%;
+}
+.navbar{
+    float: right;
+    display: flex;
+}
+.navlist{
+    text-align: right;
+    display: flex;
+}
+.navlist li{
+    list-style: none;
+}
+.navlist li a{
+    margin-right:10px;
+    text-align: right;
+    color:black;
+    padding:50px;
+    text-decoration: none;
+    padding:20px;
+}
+table{
+    float:left;
+    margin-left: 10%;
+    border:3px solid;
+    height:80%;
+    width:20%;
+    padding-top:2%;
+    padding-bottom: 2%;
+}
+th{
+    margin-top: 10%;
+}
+pricee{
+    font-size: 450%;
+}
+button{
+    background-color: red;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    width:80%;
+    height: 17%;
+    margin-top: 7%;
+}
+headings{
+    
+    font-size: 150%;
+    padding:15%;
+}
+@media screen and (max-width: 580px) {
+    table {
+        float:none;
+        height:10%;
+        margin-bottom:1%;
+
+        }
+    #div1{
+        height:150%;
+    }
+    headings{
+        font-size: 100%;
+    }
+  }
+  

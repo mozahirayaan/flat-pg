@@ -1,0 +1,92 @@
+body{
+    background: linear-gradient(
+        to right,
+        transparent 0%,
+        transparent 50%,
+        #FAD9D9 50%,
+        #FAD9D9 100%
+    ),url('bgd.jpg');
+}
+.header{
+    background:transparent;
+    height:20%;
+    width:100%;
+    color:black;
+    font-size: large;
+    
+    
+}
+.header-left{
+    float:left;
+    text-align: left;
+    padding-top: 1%;
+    padding-left: 1.5%;
+    
+    
+}
+.header-right{
+    float:right;
+    text-align: left;
+    padding-top: 1%;
+    padding-right: 1.5%;
+    
+    
+}
+
+.header-right a{
+    padding: 14px 16px;
+    text-decoration: none;
+    
+}
+.content{
+    width:100%;
+    background-color: transparent;
+    margin-top:3%;
+
+}
+.content-right{
+    float:right;
+    width:50%;
+    text-align: center;
+    font-size: xx-large;
+    
+    
+}
+.in-content-right{
+    background-color: transparent;
+    text-align: left;
+    margin-left:20%;
+  margin-right:auto;
+}
+.text1{
+    font-size:medium;
+    margin-top: 3%;
+    margin-bottom:3%;
+}
+img{
+    margin-left:10%;
+    width:30%;
+    height:65%;
+    border-radius: 8%;
+}
+button{
+    width:75%;
+    height:7%;
+    border-radius: 8%;
+    margin-top:3%;
+}
+button:hover{
+    background-color: black;
+    color: white;
+    cursor:pointer;
+}
+@media only screen and (max-width: 768px){
+    .content-right{
+        float:left;
+        width:100%;
+        text-align: center;
+        font-size: xx-large;
+        
+        
+    }
+}

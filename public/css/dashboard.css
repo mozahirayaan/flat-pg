@@ -1,0 +1,85 @@
+body{
+    background: linear-gradient(
+        to right,
+        transparent 0%,
+        transparent 50%,
+        #FAD9D9 50%,
+        #FAD9D9 100%
+    ),url('bgd.jpg');
+}
+.header{
+    background:transparent;
+    height:20%;
+    width:100%;
+    color:black;
+    font-size: large;
+    
+    
+}
+.header-left{
+    float:left;
+    text-align: left;
+    padding-top: 1%;
+    padding-left: 1.5%;
+    
+    
+}
+.header-right{
+    float:right;
+    text-align: left;
+    padding-top: 1%;
+    padding-right: 1.5%;
+    
+    
+}
+
+.header-right a{
+    padding: 14px 16px;
+    text-decoration: none;
+    
+}
+.list{
+    background-color: white;
+    width:80%;
+    height:70%;
+    margin-left:10%;
+    margin-bottom:2%;
+
+}
+.list-header{
+    background-color: black;
+    font-size: xx-large;
+    color:white;
+    padding:2%;
+}
+.list-price{
+    width:11.326%;
+    float:left;
+    background-color: white;
+    padding:2%;
+    padding-left:20%;
+    border-color: black;
+    border-width: 10px;
+    
+}
+.list-img{
+    float:left;
+    background-color: white;
+    width:50%;
+}
+img{
+    width:80%;
+    height:40%;
+    margin-left:5%;
+}
+
+.feature{
+    background-color: rgb(235, 227, 227);
+    width:20%;
+    padding:1.5%;
+    float:left;
+    font-size: large;
+    border-style:solid;
+    border-width: 2px;
+    border-color: black;
+}

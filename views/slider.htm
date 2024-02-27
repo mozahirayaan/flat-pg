@@ -1,0 +1,63 @@
+<html>
+    <title>image slide</title>
+    <style>
+    ul{ margin-top: 0%;
+         display: none;
+        background-color: black;
+        color:white;
+        position:absolute;
+        list-style: none;
+        padding:5px;
+           
+    }
+    li{
+        padding: 10px; 
+    }
+
+    </style>
+    <body>
+        <button class="dropdown">drop</button>
+        <ul>
+            <li>home</li>
+            <li>about</li>
+        </ul>
+        <button class="prev-btn">forward</button>
+        <img class="slider" src="bgd.jpg">
+        <button class="next-btn">forward</button>
+    </body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(".dropdown").click(function(){
+            $("ul").toggle();
+        })
+
+
+        var images = ['bgd.jpg', 'dtuimg.jpg','download.jpg','dtu4.jpg'];
+        var i=0;
+        $(".next-btn").click(function(){
+            if(i<images.length-1){
+                i++;
+                $(".slider").attr("src", images[i]);
+                
+            }
+            else if(i==images.length-1){
+                i=0;
+                $(".slider").attr("src", images[i]);
+                
+            }
+    })
+    $(".prev-btn").click(function(){
+            if(i==0){
+                i=images.length-1;
+                $(".slider").attr("src", images[i]);
+            }
+            else{
+                i--;
+                $(".slider").attr("src", images[i]);
+                
+            }
+            
+    })
+        
+    </script>
+</html>
