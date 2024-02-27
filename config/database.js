@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb://localhost:27017/UserDetail');
+mongoose.connect('mongodb+srv://ayaan:1234@cluster0.idzcx6c.mongodb.net/flat-pg');
 
 const userSchema = mongoose.Schema({
     googleid: String,
