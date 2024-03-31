@@ -2,7 +2,7 @@ const { hashSync } = require('bcrypt');
 const express = require('express');
 const app = express();
 const bodyParser = require('body-parser')
-const UserModel = require('./config/database');
+const { UserModel, pg } = require('./config/database');
 const session = require('express-session')
 const MongoStore = require('connect-mongo');
 const passport = require('passport');
@@ -26,7 +26,7 @@ app.use(session({
     secret: 'keyboard cat',
     resave: false,
     saveUninitialized: true,
-    store: MongoStore.create({ mongoUrl: 'mongodb://localhost:27017/UserDetail', collectionName: "sessions" }),
+    store: MongoStore.create({ mongoUrl: 'mongodb+srv://ayaan:1234@cluster0.idzcx6c.mongodb.net/flat-pg', collectionName: "sessions" }),
     cookie: {
         maxAge: 1000 * 60 * 60 * 24
     }
@@ -78,15 +78,29 @@ app.get('/logout', (req, res) => {
     res.redirect('/login')
 })
 
-app.get('/dashboard', (req, res) => {
-    if (req.isAuthenticated()) {
-        res.render("dashboard",{ user : req.user })
-    } else {
-        res.status(401).send({ msg: "Unauthorized" })
+app.get('/dashboard', async (req, res) => {
+    try {
+        // Query the database to find all documents in the 'pg' collection
+        const pg1 = await pg.find({});
+
+        // Check if the user is authenticated
+        if (req.isAuthenticated()) {
+            // Render the dashboard with user data and 'pg1' data
+            res.render("dashboard", { user: req.user, pg1: pg1 });
+        } else {
+            // If not authenticated, send a 401 Unauthorized response
+            res.status(401).send("Unauthorized");
+        }
+
+        // Log session and user details
+        console.log(req.session);
+        console.log(req.user.username);
+    } catch (err) {
+        // Handle any errors that occur during the database query or rendering
+        console.error("Error:", err);
+        res.status(500).send("Internal Server Error");
     }
-    console.log(req.session)
-    console.log(req.user.username)
-})
+});
 
 
 

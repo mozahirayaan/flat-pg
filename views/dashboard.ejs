@@ -7,15 +7,17 @@
     <body>
         
         <div class="header">
-            <div class="header-left"><%=user.username%></div>
+            <div class="header-left"></div>
             <div class="header-right"><a class="menu" href=/>Home</a>
             <a class="menu" href="contact.php">Contact us</a></div>
             </div>
-           
+            <% pg1.forEach(function(pgItem) { %>
             <div class="list">
-                <div class="list-header"></div>
-                <div class="list-price"><br>Price</div>
-                <div class="list-price"><br>Type</div>
+                
+                <div class="list-header"><%= pgItem.name %></div>
+                <div class="list-price"><%= pgItem.price %><br>Price</div>
+                <div class="list-price"><%= pgItem.type %><br>Type</div>
+                
                 <div class="list-price">$100<br>2BHK</div>
                 <div class="list-img"><img src="/images/dtuimg.jpg"></div>
             
@@ -25,6 +27,7 @@
                 <div class="feature">Fully Furnished</div>
                 
             </div>
+            <% }); %>
            
             
             

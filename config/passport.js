@@ -1,7 +1,7 @@
 const { compareSync } = require('bcrypt');
 const passport = require('passport')
 const LocalStrategy = require('passport-local').Strategy;
-const UserModel = require('./database')
+const { UserModel, pg } = require('./database');
 
 passport.use(new LocalStrategy(
   async function(username, password, done) {

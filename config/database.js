@@ -8,8 +8,18 @@ const userSchema = mongoose.Schema({
     password: String
 })
 
+const pgSchema = mongoose.Schema({
+    name: String,
+    price: String,
+    type: String
+})
+
 
 
 const UserModel = mongoose.model('User', userSchema);
+const pg = mongoose.model('pg', pgSchema);
 
-module.exports = UserModel;
+
+module.exports = {
+   UserModel, pg 
+};
