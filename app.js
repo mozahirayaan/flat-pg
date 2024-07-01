@@ -10,8 +10,8 @@ const otpGenerator = require('otp-generator')
 const twilio = require('twilio');
 
 
-const accountSid = 'AC8421b0077af7957cf97f0d4f0211f2fa';
-const authToken = '6e09200df5d95fe2fce512c91eba3140';
+const accountSid = '';
+const authToken = '';
 const client = twilio(accountSid, authToken);
 
 
